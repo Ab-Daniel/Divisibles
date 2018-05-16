@@ -1,0 +1,28 @@
+import javax.swing.JOptionPane; 
+import java.util.StringTokenizer;
+
+public class DivisiblesTest 
+{
+	
+	public static void main(String[] args) 
+	{
+		
+		String numString = JOptionPane.showInputDialog("Enter two divisibles seperated by a space");
+		
+		StringTokenizer tryingToGetDemNumbers = new StringTokenizer(numString);
+		
+		String firstDivisbleString = tryingToGetDemNumbers.nextToken();
+		
+		String secondDivisbleString = tryingToGetDemNumbers.nextToken();
+		
+		int firstDivisible = Integer.parseInt(firstDivisbleString);
+		
+		int secondDivisible = Integer.parseInt(secondDivisbleString);
+		
+		
+		
+		//System.out.println(firstDivisbleString  + " " + secondDivisbleString);
+		
+	}
+	
+}
