@@ -1,0 +1,32 @@
+
+public class Divisibles 
+{
+	
+	public Divisibles (int aDivisible, int aSecondDivisible)
+	{
+		
+		x = aDivisible;
+		
+		y = aSecondDivisible;
+		
+	}
+	
+	public void printDivisibles(int limit)
+	{
+		
+		int possibleNumber = 0;
+		
+		possibleNumber++; 
+		
+		if(possibleNumber < limit && (possibleNumber%x==0 || possibleNumber%y==0))
+		{
+			System.out.println(possibleNumber);
+		}
+		
+	}
+	
+	private int x;
+	
+	private int y;
+	
+}
