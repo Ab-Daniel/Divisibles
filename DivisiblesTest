@@ -7,21 +7,40 @@ public class DivisiblesTest
 	public static void main(String[] args) 
 	{
 		
-		String numString = JOptionPane.showInputDialog("Enter two divisibles seperated by a space");
+		boolean done = false;
 		
-		StringTokenizer tryingToGetDemNumbers = new StringTokenizer(numString);
-		
-		String firstDivisbleString = tryingToGetDemNumbers.nextToken();
-		
-		String secondDivisbleString = tryingToGetDemNumbers.nextToken();
-		
-		int firstDivisible = Integer.parseInt(firstDivisbleString);
-		
-		int secondDivisible = Integer.parseInt(secondDivisbleString);
-		
-		
-		
-		//System.out.println(firstDivisbleString  + " " + secondDivisbleString);
+		while(!done )
+		{
+			
+			String numString = JOptionPane.showInputDialog("Enter two divisibles seperated by a space");
+			
+			if(numString==null)
+			{
+				
+				done = true;
+				
+			}
+			
+			else
+			{
+				
+				StringTokenizer tryingToGetDemNumbers = new StringTokenizer(numString);
+				
+				String firstDivisbleString = tryingToGetDemNumbers.nextToken();
+				
+				String secondDivisbleString = tryingToGetDemNumbers.nextToken();
+				
+				int firstDivisible = Integer.parseInt(firstDivisbleString);
+				
+				int secondDivisible = Integer.parseInt(secondDivisbleString);
+					
+				Divisibles d = new Divisibles(firstDivisible, secondDivisible);
+					
+				d.printDivisibles(500);
+				
+			}
+			
+		}
 		
 	}
 	
