@@ -1,4 +1,5 @@
 
+
 public class Divisibles 
 {
 	
@@ -13,14 +14,29 @@ public class Divisibles
 	
 	public void printDivisibles(int limit)
 	{
+		System.out.println("Numbers <= 500 that are divisible by " + x + " or " + y+ ":");
 		
 		int possibleNumber = 0;
 		
-		possibleNumber++; 
+		int linesAndStuff = 0;
 		
-		if(possibleNumber < limit && (possibleNumber%x==0 || possibleNumber%y==0))
+		while(possibleNumber < limit)
 		{
-			System.out.println(possibleNumber);
+			possibleNumber++;
+			
+			if(possibleNumber%x==0 || possibleNumber%y==0)
+			{
+				linesAndStuff++;
+				System.out.printf("%4d", possibleNumber);
+				System.out.print("");
+				
+				if(linesAndStuff%10==0)
+				{
+					System.out.println();
+				}
+				
+			}
+			
 		}
 		
 	}
@@ -30,3 +46,4 @@ public class Divisibles
 	private int y;
 	
 }
+
